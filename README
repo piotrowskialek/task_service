@@ -1,4 +1,4 @@
-This is your new Play application
+Semantive recrutation task
 =================================
 
 This file will be packaged with your application when using `activator dist`.
@@ -8,18 +8,15 @@ There are several demonstration files available in this template.
 Controllers
 ===========
 
-- HomeController.scala:
+- TaskController
+  
+  Handles the whole logic of this application. 
 
-  Shows how to handle simple HTTP requests.
+Models
+==========
+- Tasks
 
-- AsyncController.scala:
-
-  Shows how to do asynchronous programming when handling a request.
-
-- CountController.scala:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+  Maps a task abstraction to a small inheretance structure.
 
 Components
 ==========
@@ -36,6 +33,13 @@ Components
 
   An example of a component that starts when the application starts and stops
   when the application stops.
+
+Config
+========
+
+- Routes
+
+  Defines all application routes.  
 
 Filters
 =======
