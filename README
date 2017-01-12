@@ -1,3 +1,6 @@
+To run this application: in terminal go to /task_service and type "activator run"; it should open a http daemon on localhost:9000. Routes are defined in "routes" file.
+Make sure you have sbt and activator tools installed if you want to run this app.
+
 Semantive recrutation task
 =================================
 
