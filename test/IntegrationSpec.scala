@@ -17,8 +17,9 @@ class IntegrationSpec extends PlaySpec with OneServerPerTest with OneBrowserPerT
         */
 
       go to ("http://localhost:" + port + "/semantive")
+      pageSource must include ("TODO Tasks:")
 
-      pageSource must include ("TaskController")
     }
   }
 }
+

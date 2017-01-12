@@ -17,38 +17,19 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
   }
 
-  "HomeController" should {
-
-    "render the index page" in {
-      val home = route(app, FakeRequest(GET, "/")).get
-
-      status(home) mustBe OK
-      contentType(home) mustBe Some("text/html")
-      //contentAsString(home) must include ("Your new application is ready.")
-    }
-
-  }
-
-  "CountController" should {
-
-    "return an increasing count" in {
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "0"
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "1"
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "2"
-    }
-
-  }
-
   //semantive controller
 
   "TaskController" should {
-//TODO:
+
     "return list of current tasks" in {
 
-      "xD" mustBe "xD"
+      contentAsString(route(app, FakeRequest(GET, "/report")).get) mustBe "raport: time to do every task: 0"
+      contentAsString(route(app, FakeRequest(GET, "/add?taskType=N&name=wy_task&content=content&time=1234")).get) mustBe "type: N name: wy_task content: content time: 1234 status: IN_PROGRESS"
+
 
     }
 
   }
 
 }
+
